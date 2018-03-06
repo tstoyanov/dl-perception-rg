@@ -1,0 +1,53 @@
+%%
+\documentclass[savetrees,12pt]{article}
+
+\usepackage[pdftex]{graphicx}
+\usepackage{amsmath}
+%\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{url}
+\usepackage[lined,algonl,ruled]{algorithm2e}
+\usepackage{geometry}
+%\usepackage{algorithm}
+\usepackage{listings}
+
+\usepackage{pdfpages}
+\usepackage[utf8]{inputenc}
+
+\geometry{
+    body={6.5in, 8.5in},
+	left=1.0in,
+	top=1.2in
+}
+
+\newcommand{\mbm}[1]{\mbox{\boldmath $#1$}}
+
+
+\begin{document}
+
+\title{Practice Autoencoders}
+\author{50DT057}
+\date{Due on 15.03.2018}
+%% use optional labels to link authors explicitly to addresses:
+%% \author[label1,label2]{<author name>}
+%% \address[label1]{<address>}
+%% \address[label2]{<address>}
+\maketitle
+
+\section{Learning to reconstruct images}
+In this example, we want to experiment with autoencoders for reconstructing images. We will use as a base code from this github project: \url{https://github.com/aymericdamien/TensorFlow-Examples}.
+The code has already been imported in our local repository and is located under \verb+dl-perception-rg/sample_code/chapter_14+.
+Modify the file \verb+autoencoder_original.py+ to:
+
+\begin{itemize}
+\item Use the TensorFlow estimator API, store/restore checkpoints, and display the loss information in TensorBoard.
+\item Add one more layer in the encoder / decoder architecture and observe the effect on the final loss. 
+\item Compare the two-layer and three-layer autoencoder with the same capacity.
+\end{itemize}
+
+
+\end{document}
+
