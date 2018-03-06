@@ -1,0 +1,61 @@
+%%
+\documentclass[savetrees,12pt]{article}
+
+\usepackage[pdftex]{graphicx}
+\usepackage{amsmath}
+%\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{url}
+\usepackage[lined,algonl,ruled]{algorithm2e}
+\usepackage{geometry}
+%\usepackage{algorithm}
+\usepackage{listings}
+
+\usepackage{pdfpages}
+\usepackage[utf8]{inputenc}
+
+\geometry{
+    body={6.5in, 8.5in},
+	left=1.0in,
+	top=1.2in
+}
+
+\newcommand{\mbm}[1]{\mbox{\boldmath $#1$}}
+
+
+\begin{document}
+
+\title{Practice Feed-forward Nets}
+\author{50DT057}
+\date{Due on 01.03.2018}
+%% use optional labels to link authors explicitly to addresses:
+%% \author[label1,label2]{<author name>}
+%% \address[label1]{<address>}
+%% \address[label2]{<address>}
+\maketitle
+
+\section{Tensor Flow Introduction}
+Install \verb+tensorflow+ for CPU/GPU depending on your hardware. Follow the low-level API tutorial here: \url{https://www.tensorflow.org/programmers_guide/low_level_intro}. 
+
+\section{Learning to XOR}
+In this example, we want to replicate the network from section 6.1. in the book. Using the code from the previous problem as a starting point do the following:
+\begin{itemize}
+\item Modify the input data and ground truth labels to hold the four data points for XOR on vectors in $\mathbb{R}^2$. 
+\item Add one hidden layer to the model, with a ReLU activation function. Consult the API at \url{https://www.tensorflow.org/api_docs/python/}.
+\item Train the network. How many iterations does it take to converge and what weights / biases do you converge to?
+\item (optional) Add tensorboard visualization for the graph and the loss. See \url{https://www.tensorflow.org/programmers_guide/summaries_and_tensorboard}.
+\item Try adding units to the hidden layer. How is the performance affected? What if you add more layers?
+\item Try different optimizers (Adagrad and Adam) and different learning rates.
+\item (optional) What if you use a different activation function?
+\item (optional) What happens when your input vector is in $\mathbb{R}^3$?
+\end{itemize}
+
+\section{Classification}
+Try out the tutorial on high-level TF API for feed-forward classification: \url{https://www.tensorflow.org/get_started/premade_estimators}.
+
+
+\end{document}
+
