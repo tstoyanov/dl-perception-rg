@@ -1,0 +1,48 @@
+%%
+\documentclass[savetrees,12pt]{article}
+
+\usepackage[pdftex]{graphicx}
+\usepackage{amsmath}
+%\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{url}
+\usepackage[lined,algonl,ruled]{algorithm2e}
+\usepackage{geometry}
+%\usepackage{algorithm}
+\usepackage{listings}
+
+\usepackage{pdfpages}
+\usepackage[utf8]{inputenc}
+
+\geometry{
+    body={6.5in, 8.5in},
+	left=1.0in,
+	top=1.2in
+}
+
+\newcommand{\mbm}[1]{\mbox{\boldmath $#1$}}
+
+
+\begin{document}
+
+\title{Practice CNNs}
+\author{50DT057}
+\date{Due on 05.04.2018}
+%% use optional labels to link authors explicitly to addresses:
+%% \author[label1,label2]{<author name>}
+%% \address[label1]{<address>}
+%% \address[label2]{<address>}
+\maketitle
+
+\section{TensorFlow CNN tutorials}
+Follow the tutorial on setting up a CNN in TensorFlow: \url{https://www.tensorflow.org/tutorials/layers}.
+When done, read through the tutorial on setting up a CNN on the CIFAR-10 dataset: \url{https://www.tensorflow.org/tutorials/deep_cnn}. Running the training code in this tutorial would take a long time, so make sure to play with fewer steps. 
+
+\section{Estimator API for the CIFAR dataset}
+Modify the code you created for the MNIST data set in the first tutorial. Add batch normalization layers and duplicate the architecture for the second tutorial. Do the results on the MNIST improve with the new architecture? Try to feed in the CIFAR-10 data set instead of the MNIST one.
+
+\end{document}
+
